@@ -123,7 +123,7 @@ def head(title, desc, og=None):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Cormorant:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-{KIT}<link rel="stylesheet" href="styles.css?v=11">
+{KIT}<link rel="stylesheet" href="styles.css?v=15">
 <script>document.documentElement.classList.add('js')</script>
 </head>'''
 
