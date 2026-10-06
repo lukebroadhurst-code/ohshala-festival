@@ -690,3 +690,7 @@ a.tent:nth-child(5){color:var(--night)}
 .hero{padding-top:calc(var(--nav-h) + 34px);padding-bottom:44px}
 @media (min-width:901px) and (max-height:700px){.hero{padding-top:calc(var(--nav-h) + 12px);padding-bottom:28px}}
 @media (max-width:900px){.hero{padding-top:calc(var(--nav-h) + 40px)}}
+
+/* home: the hero title is the wordmark, so the nav logo only appears once you scroll past it */
+.brand{transition:opacity .45s var(--ease),visibility .45s}
+.nav.brand-hidden .brand{opacity:0;visibility:hidden}

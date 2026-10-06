@@ -26,8 +26,13 @@
   const nav = $('#nav');
   const links = $('#links');
   const burger = $('#burger');
+  const heroTitle = document.body.dataset.page === 'home' ? $('.hero h1') : null;
   const onScroll = () => {
     nav.classList.toggle('stuck', scrollY > 40);
+    if (heroTitle) {
+      const gone = heroTitle.getBoundingClientRect().bottom < nav.offsetHeight;
+      nav.classList.toggle('brand-hidden', !gone && !links.classList.contains('open'));
+    }
     document.documentElement.style.setProperty('--sy', Math.min(scrollY * 0.25, 160));
   };
   addEventListener('scroll', onScroll, { passive: true });
@@ -37,6 +42,7 @@
     nav.classList.toggle('menu-open', open);
     burger.setAttribute('aria-expanded', open);
     document.body.style.overflow = open ? 'hidden' : '';
+    onScroll();
   });
   links.addEventListener('click', e => {
     if (e.target.closest('a')) {
@@ -44,6 +50,7 @@
       nav.classList.remove('menu-open');
       burger.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
+      onScroll();
     }
   });
 

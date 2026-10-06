@@ -123,7 +123,7 @@ def head(title, desc, og=None):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Cormorant:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-{KIT}<link rel="stylesheet" href="styles.css?v=15">
+{KIT}<link rel="stylesheet" href="styles.css?v=16">
 <script>document.documentElement.classList.add('js')</script>
 </head>'''
 
@@ -156,7 +156,7 @@ def page(fname, title, desc, body, active='', join=True, og=None):
     html = (head(title, desc, og) + '\n<body>\n<a class="skip" href="#main">Skip to content</a>\n'
             '<div class="grain" aria-hidden="true"></div>\n' + BAR + '\n' + nav(active) +
             '\n<main id="main">\n' + body + ('\n' + JOIN if join else '') +
-            '\n</main>\n' + FOOTER + '\n<script src="main.js?v=9"></script>\n</body>\n</html>\n')
+            '\n</main>\n' + FOOTER + '\n<script src="main.js?v=10"></script>\n</body>\n</html>\n')
     key = PHERO_BG.get(fname)
     if key:
         html = re.sub(r'(<section class="phero[^"]*">)',
